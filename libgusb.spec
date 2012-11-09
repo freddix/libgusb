@@ -1,15 +1,16 @@
 Summary:	GObject wrapper for libusb1 library
 Name:		libgusb
-Version:	0.1.3
+Version:	0.1.4
 Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://people.freedesktop.org/~hughsient/releases/%{name}-%{version}.tar.xz
-# Source0-md5:	9cf5d2ef121f857c565189f82e9e7233
+# Source0-md5:	e45c8eab3d95264817f4c9a28a608b93
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gtk-doc
 BuildRequires:	glib-devel
+BuildRequires:	gobject-introspection-devel
+BuildRequires:	gtk-doc
 BuildRequires:	libtool
 BuildRequires:	libusbx-devel
 BuildRequires:	pkg-config
@@ -71,12 +72,15 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS MAINTAINERS NEWS README TODO
 %attr(755,root,root) %ghost %{_libdir}/libgusb.so.?
 %attr(755,root,root) %{_libdir}/libgusb.so.*.*.*
+%{_libdir}/girepository-1.0/GUsb-1.0.typelib
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libgusb.so
-%{_libdir}/libgusb.la
 %{_includedir}/gusb-1
+%{_libdir}/libgusb.la
+%{_datadir}/gir-1.0/GUsb-1.0.gir
+%{_datadir}/vala/vapi/gusb.vapi
 %{_pkgconfigdir}/gusb.pc
 
 %files apidocs

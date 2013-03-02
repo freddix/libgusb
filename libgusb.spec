@@ -1,11 +1,11 @@
 Summary:	GObject wrapper for libusb1 library
 Name:		libgusb
-Version:	0.1.4
+Version:	0.1.5
 Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://people.freedesktop.org/~hughsient/releases/%{name}-%{version}.tar.xz
-# Source0-md5:	e45c8eab3d95264817f4c9a28a608b93
+# Source0-md5:	a2c849079ba5bae6277383a80fb01d12
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	glib-devel

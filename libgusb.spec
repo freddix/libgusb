@@ -1,7 +1,7 @@
 Summary:	GObject wrapper for libusb1 library
 Name:		libgusb
 Version:	0.1.6
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://people.freedesktop.org/~hughsient/releases/%{name}-%{version}.tar.xz
@@ -78,7 +78,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libgusb.so
 %{_includedir}/gusb-1
-%{_libdir}/libgusb.la
 %{_datadir}/gir-1.0/GUsb-1.0.gir
 %{_datadir}/vala/vapi/gusb.vapi
 %{_pkgconfigdir}/gusb.pc
